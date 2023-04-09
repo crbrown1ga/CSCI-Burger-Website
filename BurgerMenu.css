@@ -1,0 +1,95 @@
+/*A lot of this css came from the example provided and from the other team members css pages*/
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(CSCI-Burger-Website-main/burgerbackground.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    
+  } 
+  
+  h1 strong{
+    font-size: 72px;
+  }
+  
+  p{
+     text-align: left;
+     margin-left: 15px;
+     font-size: 20px;
+  }
+  header, footer {
+    border-radius: 10px;
+    background: rgba(60, 60, 54, 0.70);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    padding-top: 10px;
+    font-style: italic;
+    color: blue;
+  }
+  nav {
+    text-align: center;
+    background: rgba(60, 60, 54, 0.90);
+    line-height: 50px;
+    word-spacing: 100px; 
+    font-size: 20px;
+  }
+  nav a{
+    color: yellow;
+  }
+ 
+  nav a:hover{
+        color: white;
+  }
+  
+
+  nav li {
+    display: inline-flex;
+    font-size: 36px;
+  }
+  div{
+    background: rgba(255, 255, 255, 0.566);
+    font-size: 40px;
+    float: center;
+    border-radius: 25px;
+  }
+  p{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 77px;
+  }
+  #Drinks{
+  border-radius: 10px;
+  float: right;
+  width: 48%;
+  margin-right: 2%;
+  text-align: center;
+  height: min-content;
+  }
+  #chips{
+    border-radius: 10px;
+    float: left;
+    width: 48%;
+    color: black;
+    margin-left: 2%;
+    height: min-content;
+
+  }
+  button{
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid yellow;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+  
