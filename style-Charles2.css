@@ -91,6 +91,10 @@ CONTACT US BELOW
     padding: 0;
     box-sizing: border-box;
 }
+a:link
+{
+    color: yellow;
+}
 .contact
 {
     position: relative;
