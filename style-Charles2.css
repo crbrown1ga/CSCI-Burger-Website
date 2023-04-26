@@ -1,0 +1,264 @@
+body {
+    background: black;
+    text-align: center;
+    background-repeat: repeat-y;
+ } 
+ nav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(255, 215, 0);
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(54, 54, 54));
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    font-size: 28px;
+    position: fixed;
+    z-index: 4;
+}
+.banner{
+    width: 100%;
+    height: 150vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(burgerbackground.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.title {
+    color: rgb(255, 215, 0);
+    font-size: 45px;
+    margin-top: 35px;
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    padding-left: 540px;
+}
+.logo {
+    list-style-type: none;
+}
+nav a:hover{
+    color: white;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 215, 0);
+    text-transform: uppercase;
+}
+.header{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: white;
+}
+.header h1{
+    color: rgb(255, 215, 0);
+    font-size: 45px;
+    margin-top: 35px;
+}
+.header p{
+    margin: 20px;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 25px;
+}
+button{
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(255, 215, 0);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+/* 
+CONTACT US BELOW 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2
+{
+    font-size: 40px;
+    font-weight: 500;
+    color: yellow;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: black;
+}
+.container .contactinfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactinfo .box
+{
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+.container .contactinfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactinfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: yellow;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactinfo .box .text h3
+{
+    font-weight: 500;
+    color: white;
+}
+.contactform
+{
+    width: 70%;
+    padding: 40px;
+    background: white;
+}
+.contactform h1
+{
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+.contactform .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputBox input,.contactform .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.2s;
+    color: #666;
+}
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span
+{
+    color: red;
+    font-size: 12px;
+    transform: translateY(-20px);
+
+}
+
+/* 
+MENU BELOW 
+*/
+
+.container2 {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 50px;
+    padding-top: 100px;
+    color: white;
+}
+.menu {
+    font-weight: 100;
+    color: rgb(255, 215, 0);
+    font-size: 14px;
+}
+.menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+}
+.menu-group {
+    display: grid;
+    grid-template-columns: 325px 750px;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+.menu-item {
+    display:contents;
+}
+.menu-item-image {
+    width: 325px;
+    height: 225px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+}
+.menu-item-text {
+    flex-grow: 1;
+}
+.menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.menu-item-description {  
+    padding-top: 30px;
+    color: white;
+}
+.menu-item-name {
+    font-size:x-large;
+}
+
