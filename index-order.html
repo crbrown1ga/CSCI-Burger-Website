@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<meta charset =" utf-8">
+<title> Order Page </title>
+<html>
+
+    <body>
+        <div class="banner">
+            <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index-menu.html">Menu</a></li>
+                  <li><a href="index-order.html">Order</a></li>
+                  <li><a href="index-contact.html">Contact Us</a></li>
+                  <li><a href="About Roughdraft.html">About Us</a></li>
+              </ul>
+              </ul>
+                  <li class="title">GOLD TOWN BURGERS</li>
+                  <li class="logo"><img src="burglogo.png" alt="burger logo"></li>
+              </ul>   
+            </nav>
+    </body>
+
+    
+    <form id = "order">
+            
+        <p class="row">
+            <label for="DB">Debra's Burger QTY:</label>
+            <input type="text" value="0" id="DB" name="DB"><br>
+
+            <label for="BLT">BLT Burger QTY:</label>
+            <input type="text" value="0" id="BLT" name="BLT"><br>
+
+            <label for="OF">The Old Fashioned QTY:</label>
+            <input type="text" value="0" id="OF" name="OF"><br>
+            
+        </p>
+
+        <p class="row">
+            <label for="DX">Deluxe Burger QTY:</label>
+            <input type="text" value="0" id="DX" name="DX"><br>
+
+            <label for="DDB">Double Deluxe Burger QTY:</label>
+            <input type="text" value="0" id="DDB" name="DDB"><br>
+
+            <label for="PJ">Plain Jane QTY:</label>
+            <input type="text" value="0" id="PJ" name="PJ"><br>
+            
+        </p>
+
+        
+        <p class="row">
+            <label for="VB">Veggie Burger QTY:</label>
+            <input type="text" value="0" id="VB" name="VB"><br>
+            <label for="CB">Chicken Burger QTY:</label>
+            <input type="text" value="0" id="CB" name="CB"><br>
+            <label for="TS">Today's Special QTY:</label>
+            <input type="text" value="0" id="TS" name="TS"><br>
+                        </p>
+        
+        <p class="row">
+            <label for="CSB"> Extra Toppings QTY:</label>
+            <input type="text" value="0" id="ET" name="ET"><br>
+            <label for="EP">Extra patty QTY:</label>
+            <input type="text" value="0" id="EP" name="EP"><br>
+            <label for="EC">Extra cheese QTY:</label>
+            <input type="text" value="0" id="EC" name="EC"><br> 
+        </p>
+        <p class="row">
+            <label for="CSB">Custom Burger QTY:</label>
+            <input type="text" value="0" id="CSB" name="CSB">
+        </p>  
+
+    <div class="row"> 
+        <div id="total"></div>           
+        <input type="button" value="Compute Subtotal" onClick="compute_subtotal()">
+        <input type="reset" label for="reset" value="Reset" onClick="resetTotal()">
+        
+    </div>
+        </form> 
+    <style>
+     input:hover{
+                background-color: rgb(255, 215, 0);
+            }
+    form{
+         margin-left: auto;
+         margin-right: auto; 
+         position: relative;bottom: -250pt;
+         width: 95%;
+         text-align: left;
+         color: rgb(0, 0, 0);
+         display: table;
+         background-image: linear-gradient(rgb(255, 240, 125),rgb(50, 49, 49));
+         border-radius: 10px;
+         border: 2px solid rgb(255, 215, 0);
+     }
+    
+     input{
+        width: 50px;
+        padding: 6px 10px;
+        margin: 4px 0;
+        display: table-cell;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        box-sizing: border-box;
+        align-items: left;
+    }
+    /*big buttons*/
+    input[type=button], input[type=reset]{
+        width: auto;
+        margin: 10px 10px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        text-align: center;
+        font-size: 20px;
+        
+    }
+    input:focus {
+        background-color: rgb(255, 215, 0)
+      }
+    label {
+      
+        display: table-cell;
+        align-items: left;
+        padding: 10px;
+        
+    }
+    
+    .row
+    {
+        display: table-row; 
+        align-items: center;  
+        font-size: 24px;
+        
+    }
+        </style>
+
+    <script type="text/javascript">
+        function compute_subtotal() {
+            var total = 0; 
+            var Debra = document.getElementsByName("DB")[0].value;
+            var BLTburger = document.getElementsByName("BLT")[0].value;
+            var OLdFashioned = document.getElementsByName("OF")[0].value;
+            var Deluxe = document.getElementsByName("DX")[0].value;
+            var Double = document.getElementsByName("DDB")[0].value;
+            var Plain = document.getElementsByName("PJ")[0].value;
+            var Veggie = document.getElementsByName("VB")[0].value;
+            var Chicken = document.getElementsByName("CB")[0].value;
+            var Special = document.getElementsByName("TS")[0].value;
+            var Custom  = document.getElementsByName("CSB")[0].value;
+            var Patty = document.getElementsByName("EP")[0].value;
+            var Cheese = document.getElementsByName("EC")[0].value;
+            var Toppings = document.getElementsByName("ET")[0].value;
+            
+            let itemArray = [Debra,BLTburger,OLdFashioned,Deluxe,Double,Plain,Veggie,Chicken,Special,Custom,Patty,Cheese,Toppings]; 
+            let priceArray = [11.99,10.99,9.99,13.99,14.99,8.99,13.99,10.99,11.99,14.99,1.99,.99,.99];
+            let costArray = [];
+          
+            for (i = 0; i < 13; i++){
+                                
+                costArray.push(itemArray[i]*priceArray[i]);
+                console.log(costArray[i]);
+            }
+            
+           
+            for (j = 0; j < 13; j++){
+                total += costArray[j];
+            }
+            
+            const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2 
+            })
+
+            price = formatter.format(total)
+            
+            if (total > 0){
+            document.getElementById("total").innerHTML = "<br>Total Price is: " + price;
+           
+            } 
+            else {  
+            alert("Please enter a quantity");
+            }         
+        }
+
+
+        //reset total
+        function resetTotal(){
+            let values = document.querySelectorAll("input[type='text']");
+            for (const item in values){
+                item.value = 0;
+            }
+            document.getElementById("total").innerHTML = "";
+        }
+        function valdiateForm(event){
+            let values = document.querySelectorAll("input[type='text']"); 
+            for (let i = 0; i < values.length; i++){ 
+                inputNumber = parseInt(values[i].value); 
+    
+                if (inputNumber < 0 || isNaN(inputNumber)){ 
+                    alert("Please enter a valid quantity");
+                    event.preventDefault();
+                }                   
+            }
+        }
+        document.getElementById("order").addEventListener("focusout", valdiateForm); 
+        
+    
+    </script>
+</html>
